@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block head %}
+<title>Edit Your Posts</title>
+{% endblock %} {% block body %}
+<h1>All your Posts</h1>
+
+<hr />
+<h1>Create a New Blog Post:</h1>
+<form action="/posts" method="POST">
+  <label for="author">Author</label>
+  <input
+    class="form-control"
+    id="author"
+    type="text"
+    name="author"
+    placeholder="Maker of the content"
+  />
+  <br />
+  <label for="title">Title</label>
+  <input
+    class="form-control"
+    name="title"
+    type="text"
+    id="title"
+    placeholder="Title your content with a title"
+  />
+  <br />
+  <label for="content">Post</label>
+  <textarea
+    class="form-control"
+    id="content"
+    name="content"
+    type="text"
+    placeholder="Write your Post......"
+    rows="3"
+    aria-label="Write your story"
+  ></textarea>
+  <br />
+  <input type="submit" value="Post" />
+</form>
+<hr />
+
+{% endblock %}
